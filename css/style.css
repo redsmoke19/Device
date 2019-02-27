@@ -375,8 +375,8 @@ input[type="radio"].visually-hidden {
 
 .slider-control {
   position: absolute;
-  left: 50%;
-  top: -200px;
+  right: 77px;
+  bottom: 158px;
   z-index: 100;
   text-align: center;
   width: 100px;
@@ -395,21 +395,50 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+.slider-control .slider-control-item:not(:nth-child(3)) {
+  margin-right: 14px;
+}
+
 .slider-control .slider-control-item::after {
   content: "";
   width: 12px;
   height: 12px;
-  background: red;
   position: absolute;
   top: 2px;
   left: 2px;
   z-index: 1;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.slider-list .slide {
+  display: none;
+}
+
+#product-1:checked ~ .slider-list #slide-1,
+#product-2:checked ~ .slider-list #slide-2,
+#product-3:checked ~ .slider-list #slide-3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+#product-1:checked ~ .slider-control .slider-control-item--1::before,
+#product-2:checked ~ .slider-control .slider-control-item--2::before,
+#product-3:checked ~ .slider-control .slider-control-item--3::before {
+  content: "";
+  top: 6px;
+  left: 6px;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border: 1px solid black;
   border-radius: 50%;
 }
 
 /* Slider toggle end */
 
 .slider {
+  height: 500px;
   padding: 0 60px;
   position: relative;
   top: -110px;
@@ -421,15 +450,26 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.slider-item {
-  display: flex;
-  justify-content: space-between;
-}
-
 .slider-prev {
   width: 500px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.slider-image {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slider-item:nth-child(2) .slider-image {
+  left: 40px;
+  top: 9px;
+}
+
+.slider-item:nth-child(3) .slider-image {
+  left: -50px;
+  top: 65px;
 }
 
 .slider-specification {
@@ -438,17 +478,18 @@ input[type="radio"].visually-hidden {
   width: 500px;
 }
 
-.slider-title {
+.slide .slider-title {
   position: relative;
   margin: 0;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   line-height: 56px;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  z-index: 10;
 }
 
-.slider-title::after {
+.slide:nth-child(1) .slider-title::after {
   content: "01";
   position: absolute;
   margin-left: auto;
@@ -458,6 +499,33 @@ input[type="radio"].visually-hidden {
   font-size: 180px;
   line-height: 180px;
   color: #ffffff;
+  z-index: -1;
+}
+
+.slide:nth-child(2) .slider-title::after {
+  content: "02";
+  position: absolute;
+  margin-left: auto;
+  top: -90px;
+  left: 330px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 180px;
+  line-height: 180px;
+  color: #ffffff;
+  z-index: -1;
+}
+
+.slide:nth-child(3) .slider-title::after {
+  content: "03";
+  position: absolute;
+  margin-left: auto;
+  top: -90px;
+  left: 330px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 180px;
+  line-height: 180px;
+  color: #ffffff;
+  z-index: -1;
 }
 
 .slider-title::before {
@@ -473,6 +541,75 @@ input[type="radio"].visually-hidden {
 .slider-description {
   margin: 0;
   width: 480px;
+  margin-bottom: 30px;
+}
+
+.slider-item-button {
+  position: relative;
+  display: block;
+  padding: 12px 44px;
+  margin-bottom: 40px;
+  width: 220px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  color: #000000;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.slider-item-button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.slider-item-button::before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  left: 0;
+  top: calc(50% - 4px);
+  background-color: #f0c52e;
+  z-index: -1;
+  transition: all linear 0.2s;
+}
+
+.slider-item-button:hover::before {
+  height: 100%;
+  top: 0;
+}
+
+.slider-advantages {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slider-advantage {
+  margin-right: 80px;
+}
+
+.slider-advantage p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-family: "Gilroy", Arial,sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.36px;
+  white-space: nowrap;
+}
+
+.slider-advantage span {
+  display: block;
+  color: #464646;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.13px;
+  font-size: 13px;
+  line-height: 20px;
 }
 
 
