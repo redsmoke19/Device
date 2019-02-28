@@ -730,6 +730,23 @@ main {
   min-width: 285px;
 }
 
+.service-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.service-link:hover::after {
+  height: 100%;
+  top: 0;
+}
+
+.service-item.service-link__current {
+  background-color: #000000;
+}
+
+.service-item.service-link__current a {
+  color: #f0c52e;
+}
+
 .service-link {
   position: relative;
   display: block;
@@ -745,10 +762,6 @@ main {
   text-transform: uppercase;
 }
 
-.service-item:not(:last-child) .service-link {
-  margin-bottom: 20px;
-}
-
 .service-link::after {
   content: "";
   position: absolute;
@@ -759,23 +772,6 @@ main {
   left: 0;
   top: calc(50% - 4px);
   transition: all linear 0.1s;
-}
-
-.service-link:hover::after {
-  height: 100%;
-  top: 0;
-}
-
-.service-item .service-link__current {
-  color: #f0c52e;
-}
-
-.service-item .service-link__current::after {
-  content: "";
-  top: 0;
-  height: 100%;
-  width: 280px;
-  background-color: #000000;
 }
 
 .service-information {
