@@ -973,6 +973,7 @@ main {
 .main-company-contacts img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .main-company-link {
@@ -1017,10 +1018,13 @@ footer {
   padding: 65px 0;
 }
 
+/* Footer top */
+
 .footer-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .footer-top .footer-logo {
@@ -1071,5 +1075,275 @@ footer {
   left: 0;
 }
 
-/* End Footer */
+/* Footer Middle */
 
+.main-footer-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 65px;
+}
+
+.footer-contacts {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.footer-menu-list {
+  width: 440px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-menu-item a {
+  color: #ffffff;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.footer-menu-item a:hover { opacity: 0.6; }
+.footer-menu-item a:active { opacity: 0.3; }
+
+/* Footer bottom */
+
+.main-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.footer-social-item a {
+  display: flex;
+  opacity: 0.3;
+}
+
+.footer-social-item a:hover { opacity: 0.6; }
+.footer-social-item a:active { opacity: 0.1; }
+
+.footer-academy {
+  display: inherit;
+}
+
+.footer-academy:hover  { opacity: 0.6; }
+.footer-academy:active { opacity: 0.3; }
+
+/* Modal */
+
+
+
+/* Modal Close */
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: -80px;
+  border: none;
+  background-color: transparent;
+  opacity: 0.5;
+}
+
+.modal-close:hover { opacity: 1; }
+.modal-close:active { opacity: 0.3; }
+
+/* Modal Map */
+
+iframe {
+  border: none;
+}
+
+@keyframes modal-show {
+  0% { transform: scale(0) }
+  100% { transform: scale(1) }
+}
+
+.modal-map {
+  display: none;
+  position: fixed;
+  width: 960px;
+  height: 560px;
+  top: 50%;
+  margin-top: -280px;
+  left: 50%;
+  margin-left: -480px;
+  z-index: 100;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Modal write */
+
+.modal-write {
+  display: none;
+  background-color: #ffffff;
+  position: fixed;
+  width: 960px;
+  height: 555px;
+  padding: 90px 100px;
+  top: 50%;
+  margin-top: -277px;
+  left: 50%;
+  margin-left: -480px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.modal-form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.modal-write label  {
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+
+}
+
+.modal-write input  {
+  color: #464646;
+  width: 360px;
+  height: 50px;
+  margin: 0;
+  padding: 15px 20px 15px  20px;
+  border: none;
+  background-color: rgba(229, 229, 229, 0.5);
+}
+
+.modal-write textarea {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  color: #464646;
+  font-weight: 400;
+  margin: 0 0 40px 0;
+  padding: 15px 20px;
+  border: none;
+  width: 760px;
+  height: 155px;
+  background-color: rgba(229, 229, 229, 0.5);
+}
+
+.modal-write input:hover,
+.modal-write textarea:hover {
+  background-color: rgba(229, 229, 229, 0.8);
+}
+
+.modal-write input:focus,
+.modal-write textarea:focus {
+  outline: 3px solid rgba(240, 197, 46, 0.5);
+  background-color: #ffffff;
+}
+
+.modal-form-button {
+  position: relative;
+  width: 200px;
+  display: block;
+  margin: 0;
+  padding: 12px 0;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  color: #000000;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-form-button::before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  left: 0;
+  top: calc(50% - 4px);
+  background-color: #f0c52e;
+  z-index: -1;
+  transition: all linear 0.1s;
+}
+
+.modal-form-button:hover::before {
+  height: 100%;
+  top: 0;
+}
+
+.modal-show {
+  display: block;
+  animation-name: modal-show;
+  animation-duration: 0.2s;
+}
+
+.modal-write .modal-close {
+  right: 20px;
+  top: 20px;
+}
+
+/* JS */
+
+.js-modal-error {
+  animation-name: modal-error;
+  animation-duration: .4s;
+}
+
+/* Animation */
+
+@keyframes modal-error {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+/* OverLay */
+
+@keyframes overlay {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 20; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.overlay-show {
+  display: block;
+  animation-name: overlay;
+  animation-duration: .2s;
+}
