@@ -70,6 +70,11 @@ input[type="radio"].visually-hidden {
   min-height: 300px;
 }
 
+.catalog-nav {
+  min-height: 185px;
+  margin-bottom: 40px;
+}
+
 .main-nav-logo {
   font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
@@ -154,14 +159,16 @@ input[type="radio"].visually-hidden {
   width: 500px;
 }
 
-.main-nav-social__login {
+.main-nav-social__login,
+.catalog-nav-social__user {
   position: relative;
   display: block;
   color: #000000;
   padding-left: 25px;
 }
 
-.main-nav-social__login::before {
+.main-nav-social__login::before,
+.catalog-nav-social__user::before {
   content: "";
   width: 13px;
   height: 13px;
@@ -172,13 +179,22 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 }
 
-.main-nav-social__login:hover {
-  opacity: 0.6;
+.main-nav-social__login:hover,
+.catalog-nav-social__user:hover { opacity: 0.6; }
+
+.main-nav-social__login:active,
+.catalog-nav-social__user:active { opacity: 0.3; }
+
+.catalog-nav-social__wrapper {
+  display: flex;
 }
 
-.main-nav-social__login:active {
-  opacity: 0.3;
+.catalog-nav-social__exit {
+  margin-left: 20px;
+  color: rgba(0, 0, 0, 0.3);
 }
+
+.catalog-nav-social__exit:hover { color: rgba(0, 0, 0, 0.9)}
 
 .main-nav__purchases-list {
   margin: 0;
@@ -1009,7 +1025,111 @@ main {
   top: 0;
 }
 
-/* End company About */
+/* Catalog */
+
+.catalog-nav .main-nav-catalog {
+  position: absolute;
+}
+
+main.catalog {
+  position: relative;
+  top: 0;
+}
+
+.catalog-title {
+  margin-bottom: 20px;
+  padding: 0 80px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.47px;
+  text-align: left;
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs-list {
+  margin: 0;
+  padding: 0 60px;
+  list-style: none;
+  display: flex;
+}
+
+.breadcrumbs-item a {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+}
+
+.breadcrumbs-item a:not([href]) {
+  cursor: default;
+}
+
+.breadcrumbs-item a[href]:hover { color: rgba(0, 0, 0, 0.6); }
+.breadcrumbs-item a[href]:active { color: rgba(0, 0, 0, 0.1); }
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.breadcrumbs-item:not(:first-child) a {
+  position: relative;
+  padding-left: 20px;
+}
+
+.breadcrumbs-item:not(:first-child) a::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  background: url("../img/svg/nav-arrow.svg") no-repeat;
+  top: 7px;
+  left: 0;
+}
+
+/* Inner page */
+
+
+/* Filter */
+
+.catalog-filter-title {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+/* Sorting */
+
+.catalog-sorting {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.catalog-sorting-title {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.catalog-sorting-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 /* Footer */
 
@@ -1147,9 +1267,8 @@ footer {
 .footer-academy:hover  { opacity: 0.6; }
 .footer-academy:active { opacity: 0.3; }
 
+
 /* Modal */
-
-
 
 /* Modal Close */
 
