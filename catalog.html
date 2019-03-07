@@ -97,6 +97,46 @@
         </div>
       </div>
     </div>
+    <div class="main-catalog">
+      <div class="container">
+        <div class="catalog-filter">
+          <form class="catalog-form" action="https://echo.htmlacademy.ru" method="post" oninput="rangecount.value=count.value">
+            <fieldset class="form-group">
+              <legend>Стоимость</legend>
+              <input type="range" min="0" max="10000" step="100" id="rage" name="count">
+              <span class="output-help">от</span>
+              <output name="rangecount">0</output>
+            </fieldset>
+            <fieldset class="form-group">
+              <legend>Цвет</legend>
+              <ul class="catalog-filter-list__color">
+                <li>
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-black">
+                  <label for="color-black">Черный</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-white">
+                  <label for="color-white">Белый</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-blue">
+                  <label for="color-blue">Синий</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-red">
+                  <label for="color-red">Красный</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-pink">
+                  <label for="color-pink">Розовый</label>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+        <div class="catalog-prev">ddd</div>
+      </div>
+    </div>
   </section>
 </main>
 <script src="js/catalog-js.js"></script>

@@ -1107,7 +1107,7 @@ main.catalog {
   background-color: #dcdcdc;
   width: 270px;
   margin: 0;
-  padding: 25px 25px 25px 0;
+  padding: 25px 70px 25px 0;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -1201,6 +1201,160 @@ main.catalog {
 
 .catalog-sorting-button__down--active {
   border-color: transparent transparent rgba(0, 0, 0, 1);
+}
+
+/* Catalog Main */
+
+.main-catalog {
+  background-image: linear-gradient(to right,rgb(235, 235, 235) 0%,rgb(235, 235, 235) 28%,rgb(255, 255, 255) 28%,rgb(255, 255, 255) 100%);
+}
+
+.main-catalog .container {
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+/* Catalog main filter */
+
+.catalog-filter {
+  background-color: rgb(235, 235, 235);
+  width: 270px;
+  padding-right: 70px;
+  padding-top: 70px;
+}
+
+.form-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.form-group legend {
+  width: 100%;
+  display: block;
+  padding-top: 15px;
+  margin-bottom: 30px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 0.18px;
+  border-top: 2px solid black;
+}
+
+/*!* Range *!*/
+
+/*!* Скрываем стандартный range *!*/
+
+.form-group input[type="range"] {
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: transparent;
+}
+
+.form-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.form-group input[type="range"]:focus {
+  outline: none;
+}
+
+/* Скрываем стандартный range */
+
+/* Рисуем новый ползунок */
+
+.form-group input[type="range"]::-webkit-slider-thumb {
+  position: relative;
+  top: -10px;
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 1px 1px 1px #dedede;
+  z-index: 1;
+}
+
+/* All the same stuff for Firefox */
+.form-group input[type=range]::-moz-range-thumb {
+  box-shadow: 0 1px 1px 1px #dedede;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+.form-group input[type=range]::-ms-thumb {
+  box-shadow: 0 1px 1px 1px #dedede;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* Рисуем трек для ползунка */
+
+.form-group input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #dbdbdb;
+}
+
+.form-group input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #dbdbdb;
+}
+
+.form-group input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #dbdbdb;
+}
+
+.form-group input[type=range]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #dbdbdb;
+}
+
+.output-help,
+output {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* Checkbox */
+
+.catalog-filter-list__color {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  list-style: none;
+}
+
+.catalog-filter-list__color label {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.14px;
 }
 
 /* Footer */
