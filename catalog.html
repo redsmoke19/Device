@@ -105,33 +105,47 @@
               <legend>Стоимость</legend>
               <input type="range" min="0" max="10000" step="100" id="rage" name="count">
               <span class="output-help">от</span>
-              <output name="rangecount">0</output>
+              <output name="rangecount">5000</output>
             </fieldset>
             <fieldset class="form-group">
               <legend>Цвет</legend>
               <ul class="catalog-filter-list__color">
-                <li>
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-black">
+                <li class="catalog-filter-item__color">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-black" checked>
                   <label for="color-black">Черный</label>
                 </li>
-                <li>
+                <li class="catalog-filter-item__color">
                   <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-white">
                   <label for="color-white">Белый</label>
                 </li>
-                <li>
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-blue">
+                <li class="catalog-filter-item__color">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-blue" checked>
                   <label for="color-blue">Синий</label>
                 </li>
-                <li>
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-red">
+                <li class="catalog-filter-item__color">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-red" checked>
                   <label for="color-red">Красный</label>
                 </li>
-                <li>
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-pink">
+                <li class="catalog-filter-item__color">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="color-black" id="color-pink" disabled>
                   <label for="color-pink">Розовый</label>
                 </li>
               </ul>
             </fieldset>
+            <fieldset class="form-group">
+              <legend>Bluetooth</legend>
+              <ul class="catalog-filter-list__bluetooth">
+                <li class="catalog-filter-item__bluetooth">
+                  <input class="visually-hidden filter-input-radio" type="radio" name="bluetooth" id="bluetooth-true" value="blu-true" checked>
+                  <label for="bluetooth-true">Есть</label>
+                </li>
+                <li class="catalog-filter-item__bluetooth">
+                  <input class="visually-hidden filter-input-radio" type="radio" name="bluetooth" id="bluetooth-false" value="blu-false">
+                  <label for="bluetooth-false">Нет</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button  class="catalog-filter-button" type="button">Показать</button>
           </form>
         </div>
         <div class="catalog-prev">ddd</div>
